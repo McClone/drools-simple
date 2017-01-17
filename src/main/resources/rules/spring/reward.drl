@@ -1,0 +1,13 @@
+package rules.spring;
+
+import org.mcclone.service.impl.DroolsExampleServiceImpl.YearCount;
+
+global java.util.List list;
+
+dialect  "mvel"
+
+rule "reward"
+salience 1
+    when y : YearCount(count > 1)
+    then  list.add(y.getCount());
+end

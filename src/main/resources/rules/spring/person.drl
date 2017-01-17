@@ -1,0 +1,9 @@
+package rules.spring;
+dialect  "mvel"
+
+rule "person"
+    when
+        eval(true);
+    then
+        System.out.println("123456");
+end
